@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto</title>
 </head>
 <body>
     <nav>
-        <p>Enlaces:</p> 
         <a href="museos.html">MUSEOS</a>
         <a href="contacto.html">CONTACTOS</a>
         <a href="index.html">PRINCIPAL</a>
@@ -15,19 +15,18 @@
     <section>
         <h1>Contactanos atraves del formulario: </h1>
         <form action="">
-            <div>
+            <section class="Contenido">
                 <label for="nombre">Nombre: </label>
                 <input type="text" name="nombre">
-            </div>
-            <div>
+                <label for="apellido">Apellido: </label>
+                <input type="text" name="apellido">
                 <label for="email">Email: </label>
                 <input type="text" name="email">
-            </div>
-            <div>
                 <label for="motivo">Consulta: </label>
                 <textarea name="motivo"></textarea>
-            </div>
-            <button>Enviar</button>
+                <button>Enviar</button>
+                <button>Borrar</button>
+            </section>
         </form>
     </section>
 </body>
