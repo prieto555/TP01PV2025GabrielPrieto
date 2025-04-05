@@ -1,0 +1,45 @@
+*{
+    background-color: rgb(189, 92, 92);
+}
+a{
+    text-decoration: none;
+    margin: 10px;
+}
+img{
+    width: 250px;
+    height: 200px;
+}
+h1, h2{
+    text-decoration: underline
+}
+#contact_form{
+    height: auto;
+}
+.Contenido{
+    display: flex;
+}
+#museo{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 75px;
+}
+@media (max-width:600px){
+    .Contenido{
+        flex-direction: column;
+    }
+    #museo{
+        flex-direction: column;
+    }
+}
+@media (max-width:1400px){
+    #contact_form section{
+        flex-direction: column;
+        width: 75%;
+    }
+}
+@media (max-width:1031px){
+    #museo{
+        flex-direction: column;
+    }
+}

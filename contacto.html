@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/CSS/style.css">
     <title>Contacto</title>
 </head>
 <body>
@@ -14,20 +14,36 @@
     </nav>
     <section>
         <h1>Contactanos atraves del formulario: </h1>
-        <form action="">
+        <form id="contact_form">
             <section class="Contenido">
                 <label for="nombre">Nombre: </label>
-                <input type="text" name="nombre">
+                <input type="text" id="nombre" name="nombre" required>
+
                 <label for="apellido">Apellido: </label>
-                <input type="text" name="apellido">
+                <input type="text" id="apellido" name="apellido" required>
+
                 <label for="email">Email: </label>
-                <input type="text" name="email">
+                <input type="text" id="email" name="email" required>
+
                 <label for="motivo">Consulta: </label>
-                <textarea name="motivo"></textarea>
-                <button>Enviar</button>
+                <textarea id="motivo" name="motivo" required></textarea>
+
+                <button type="submit" onclick="enviarFormulario()">Enviar</button>
                 <button>Borrar</button>
             </section>
         </form>
     </section>
+    <script>
+        function enviarFormulario(){
+            event.preventDefault();
+            var apellido = document.getElementById("apellido").value;
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            console.log("Nombre: ",nombre);
+            console.log("Apellido: ",apellido);
+            console.log("Email: ",email);
+            alert("Nombre: "+nombre+", Apellido: "+apellido+" y Email: "+email);
+        }
+    </script>
 </body>
 </html>
